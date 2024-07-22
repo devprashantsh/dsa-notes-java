@@ -1,11 +1,44 @@
-class StringClass {
+import java.util.HashSet;
+
+class ArrayStringClass {
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 5 };
-        reverse(arr);
-        printArray(arr);
+        // int[] arr = { 1, 2, 3, 4, 5 };
+        // reverse(arr);
+        // printArray(arr);
+        // System.out.println(isUnique2("eielwty"));
+        // System.out.println(isUnique2("fwerh"));
     }
 
+
+    // is Unique: Implement an algorithm to determine if a string has all unique charaters.
+    // What if you cannot use additional data structures?
+    public static boolean isUnique(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+    // let's use data structure (HASHSET)
+    public static boolean isUnique2(String s) {
+        HashSet<Character> set = new HashSet<>();
+        for (char c: s.toCharArray()){
+            if (!set.add(c)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    
+
+
+    // utils
     static void reverse(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int r = array.length - 1 - i;
