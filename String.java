@@ -3,12 +3,18 @@ import java.util.HashSet;
 class ArrayStringClass {
 
     public static void main(String[] args) {
-        // int[] arr = { 1, 2, 3, 4, 5 };
-        // reverse(arr);
-        // printArray(arr);
-        // System.out.println(isUnique2("eielwty"));
-        // System.out.println(isUnique2("fwerh"));
+        // Array syntax
+        // datatype [] variableName = new datatype[size];
+        int[] rnos = new int[5];
+        // or directly
+        int[] rnos2 = { 1, 2, 3, 4 };
+
+        //declaration of array, ros is getting defined in the stack
+        int[] ros; 
+        ros = new int[5]; // initialisatio: actually here object is being created in memory
     }
+
+    
 
 
     // is Unique: Implement an algorithm to determine if a string has all unique charaters.
